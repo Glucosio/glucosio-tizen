@@ -1,0 +1,9 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+
+edctool = edje_cc
+edcflags = -id "/home/chris/workspace/GlucosioEDC/res/images" -id "/home/chris/tizen-sdk/tools/enventor/share/enventor/images" -sd "/home/chris/workspace/GlucosioEDC/edje/sounds" -sd "/home/chris/tizen-sdk/tools/enventor/share/enventor/sounds" -fd "/home/chris/workspace/GlucosioEDC/edje/fonts" -fd "/home/chris/tizen-sdk/tools/enventor/share/enventor/fonts"
+
+build res/edje/glucosioedc.edj: build_edc ../res/edje/glucosioedc.edc 

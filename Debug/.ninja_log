@@ -1,0 +1,9 @@
+# ninja log v5
+0	151	0	src/glucosioedc.o	ed380a5a8d15d1c0
+0	67	0	glucosioedc	3b8dda128c060dec
+1	32	0	res/edje/glucosioedc.edj	a23308163a498812
+0	22	0	res/edje/glucosioedc.edj	a23308163a498812
+0	143	0	src/glucosioedc.o	ed380a5a8d15d1c0
+143	206	0	glucosioedc	3b8dda128c060dec
+0	136	0	src/glucosioedc.o	ed380a5a8d15d1c0
+136	192	0	glucosioedc	3b8dda128c060dec
