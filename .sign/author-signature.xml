@@ -4,15 +4,23 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="bin%2Fglucosioedc">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>t/dzLwJvUAcz5r2oapAcV1Bb/Ii+oOeR882bSVBP33I=</DigestValue>
+<DigestValue>wWWnnvWaRblw70gvpTUM5WAEcNTwlALXYj96/D8hq5Y=</DigestValue>
 </Reference>
 <Reference URI="res%2Fedje%2Fglucosioedc.edj">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>fcMMsy3Cxs6wl2MOETSKZwVd4LmGaiOrx0bv8E9Yl+Q=</DigestValue>
+<DigestValue>W/WG1bVjTYHwjn0HxyK74W01xprvar4Vu4z3/ATr7cA=</DigestValue>
 </Reference>
 <Reference URI="res%2Fimages%2Fglucosio-logo.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>QbqiUp/YSqdInYq5uoFNK56LOq6YrnQ8GUWQ0LR3Oq8=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmicrophone.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>wbibawila6edAUBogEamnLjRwMzCCyH4g6OKPYoX3+A=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmicrophone.svg">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>Qvon7MEU1pqpvK0LTTWuEJHFyrhawm5IVxmxXL4sVAo=</DigestValue>
 </Reference>
 <Reference URI="shared%2Fres%2Fglucosioedc.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -31,11 +39,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-J2qLCh3mbpjyF3jdpUuR65eaZL53qWLm49H79lkPuTgMUN0k7XTZX24xhyYiwd3o75kdXE9kM1sn
-JlU7/w2gr32EBdklQoJe2zgHIAI8o5h0VuNz3dq0GGGky5F/GiLpN0yqiPDhw7UbW5TY4UTWD+xo
-rFDgEQhjSVHOZ7iHTYSkiIKt+v+DigxTbB6zdoo5A07I/JOpsjuSXR6d8q7Oa3st0zMgosltOzH9
-utw49xVhwijGEdoMYwOVzcSXH/4c5VwlDQuxEsS3uAIJGpwPHvoxRIG4O7zUw9xH/OHeaHipjVYu
-W4LRr36XfzMBEgGUxI7XjoimDQDs0UTfcSTPsA==
+bzEC+dUQ226eMZKyL3n+RPuNxVHAnSEnQwugSksHkB699A1SM4gb+Nt4bhGoS8F2Q/guQVfVrIvf
+OnUNDlefjqOjlU4Wpl36Jdz5WLslz8tyzGlWW+7/gHlm98yg/PvmJ+6xr/lUqzoWSZZ4UCrm+lsP
+pb075xRtbJzxenqtf2TJdgIRtDXDxF1tulp64TE9F1fSu64nY+Tp+LC3x8KoHvLg27nLV6E8DIVV
+Rg86NJwQ9j/ojjBoFhKXgML5f8gQ2CYBv3wRzilJ80LsM8l9akjp6Z+8jeHGsnnUNSksVbacUjlw
++Tq/5IZnOrTz6MxzVa23G6SLc8pYyb1qa5NZqg==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

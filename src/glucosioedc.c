@@ -1,10 +1,134 @@
 #include "glucosioedc.h"
+#include <stt.h>
+#include <sap.h>
 
 typedef struct appdata{
 	Evas_Object* win;
 	Evas_Object* layout;
 	Evas_Object* conform;
 } appdata_s;
+
+
+/* start stt wrapper functions */
+
+static stt_h stt;
+
+void
+create_stt_handle()
+{
+    dlog_print(DLOG_INFO, "TAG", "create_stt_handle called");
+    stt_h stt;
+    int ret;
+    ret = stt_create(&stt);
+     if (STT_ERROR_NONE != ret)
+    	dlog_print(DLOG_DEBUG, "ERROR", "in create stt handle");
+}
+
+void
+destroy_stt_handle()
+{
+	dlog_print(DLOG_INFO, "TAG", "destroy stt handle called");
+    int ret;
+    ret = stt_destroy(stt); /* stt is the STT handle */
+     if (STT_ERROR_NONE != ret)
+     	dlog_print(DLOG_DEBUG, "ERROR", "error in destroy stt handle");
+
+}
+
+
+void
+prepare_for_stt()
+{
+    dlog_print(DLOG_INFO, "TAG", "prepare_for_stt called");
+	int ret;
+    ret = stt_prepare(stt);
+    if (STT_ERROR_NONE != ret)
+    	dlog_print(DLOG_DEBUG, "ERROR", "error in prepare_for_stt");
+}
+
+void
+unprepared_for_stt()
+{
+    dlog_print(DLOG_INFO, "TAG", "unprepared_for_stt called");
+    int ret;
+    ret = stt_unprepare(stt);
+    if (STT_ERROR_NONE != ret)
+    	dlog_print(DLOG_DEBUG, "ERROR", "error in unprepared_for_stt");
+}
+
+
+void
+start_stt(const char* language, const char* type)
+{
+	dlog_print(DLOG_INFO, "TAG", "start_stt called");
+	int ret;
+    ret = stt_start(stt, language, STT_RECOGNITION_TYPE_FREE); /* The default language is NULL */
+    if (STT_ERROR_NONE != ret)
+    	dlog_print(DLOG_DEBUG, "ERROR", "error in start_stt");
+}
+
+void
+stop_stt()
+{
+	dlog_print(DLOG_INFO, "TAG", "stop_stt called");
+    int ret;
+    ret = stt_stop(stt);
+    if (STT_ERROR_NONE != ret)
+    	dlog_print(DLOG_DEBUG, "ERROR", "error in stop_stt");
+}
+
+
+/* handle stt results */
+
+bool
+result_time_cb(stt_h stt, int index, stt_result_time_event_e event, const char* text, long start_time, long end_time, void* user_data)
+{
+	dlog_print(DLOG_INFO, "READING", "results: %s", text);
+}
+
+
+void
+recognition_result_cb( stt_result_event_e event, const char** data, int data_count, const char* msg, void* user_data)
+{
+    /* If you want to get time info of result */
+    int ret;
+    ret = stt_foreach_detailed_result(stt, result_time_cb, NULL);
+    if (STT_ERROR_NONE != ret)
+    	dlog_print(DLOG_DEBUG, "ERROR", "error in recognition_result_cb");
+    /* Your code */
+}
+
+void
+set_recognition_result_cb()
+{
+    int ret;
+    ret = stt_set_recognition_result_cb(stt, recognition_result_cb, NULL);
+    if (STT_ERROR_NONE != ret)
+    	dlog_print(DLOG_DEBUG, "ERROR", "error in set_recognition_result_cb");
+}
+
+void
+unset_recognition_result_cb()
+{
+    int ret;
+    ret = stt_unset_recognition_result_cb(stt);
+    if (STT_ERROR_NONE != ret)
+    	dlog_print(DLOG_DEBUG, "ERROR", "error in recognition_result_cb");
+}
+
+
+static Eina_Bool _timer_cb(void *data) {
+	stop_stt();
+	return ECORE_CALLBACK_DONE;
+
+}
+
+/* end handle stt results */
+
+
+
+
+/* end stt wrapper functions */
 
 static void
 win_delete_request_cb(void *data, Evas_Object *obj, void *event_info)
@@ -28,6 +152,20 @@ app_get_resource(const char *edj_file_in, char *edj_path_out, int edj_path_max)
 		snprintf(edj_path_out, edj_path_max, "%s%s", res_path, edj_file_in);
 		free(res_path);
 	}
+}
+
+
+static void _click_cb(void *data, Evas_Object *button, void *event_info){
+	dlog_print(DLOG_DEBUG, "TAG", "clicked");
+	Evas_Object *layout = data;
+	elm_layout_signal_emit(layout, "microphone_show", "our_signal_source");
+	create_stt_handle();
+	prepare_for_stt();
+	set_recognition_result_cb();
+	start_stt('en_US',STT_RECOGNITION_TYPE_FREE);
+	ecore_timer_add(7, _timer_cb, NULL);
+	set_recognition_result_cb();
+
 }
 
 static void
@@ -59,18 +197,24 @@ create_base_gui(appdata_s *ad)
 	app_get_resource(EDJ_FILE, edj_path, (int)PATH_MAX);
 	ad->layout = elm_layout_add(ad->win);
 	elm_layout_file_set(ad->layout, edj_path, GRP_MAIN);
-	elm_object_part_text_set(ad->layout, "txt_title", "Hello Tizen");
+	elm_object_part_text_set(ad->layout, "txt_title", "Glucosio");
 	evas_object_size_hint_weight_set(ad->layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	eext_object_event_callback_add(ad->layout, EEXT_CALLBACK_BACK, layout_back_cb, ad);
 	elm_object_content_set(ad->conform, ad->layout);
+
 	Evas_Object *button = elm_button_add(ad->layout);
+	evas_object_smart_callback_add(button, "clicked", _click_cb, ad->layout);
+
+
 	elm_object_part_content_set(ad->layout, "bottom_button_area", button);
+
 	elm_object_style_set(button, "bottom");
 	evas_object_show(button);
 	/* Show window after base gui is set up */
 	evas_object_show(ad->win);
 
 }
+
 
 static bool
 app_create(void *data)
@@ -149,6 +293,7 @@ ui_app_low_memory(app_event_info_h event_info, void *user_data)
 int
 main(int argc, char *argv[])
 {
+
 	appdata_s ad = {0,};
 	int ret = 0;
 
