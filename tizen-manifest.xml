@@ -3,6 +3,12 @@
 	<profile name="wearable" />
 	<ui-application appid="org.example.glucosioedc" exec="glucosioedc" type="capp" multiple="false" taskmanage="true" nodisplay="false">
 		<icon>glucosioedc.png</icon>
-		<label>glucosioedc</label>
+		<label>Glucosio</label>
 	</ui-application>
+	 <privileges>
+        <privilege>http://tizen.org/privilege/recorder</privilege>
+    </privileges>
+   
+    <feature>http://tizen.org/feature/speech.recognition</feature> 
+    <feature>http://tizen.org/feature/microphone</feature>
 </manifest>
