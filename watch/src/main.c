@@ -1,6 +1,7 @@
 #include <watch_app.h>
 
 #include "face.h"
+#include "application_manager.h"
 
 /**
  * This function called once when user choose in watch faces menu current watch.
@@ -13,6 +14,25 @@ _create_cb(int width, int height, void *data)
    face_create(width, height);
 
    return true;
+}
+
+/**
+ * This function called each time when watch appears on display.
+ *
+ * Here we check existance of glucosio ui application and if it exist create indicator
+ * and button to start ui application.
+ */
+static void
+_resume_cb(void *data)
+{
+   if (glucosio_ui_application_is_exist())
+     {
+        face_glucose_indicator_show();
+     }
+   else
+     {
+        face_glucose_indicator_hide();
+     }
 }
 
 /**
@@ -55,6 +75,7 @@ main(int argc, char *argv[])
 
    // 2. Registering special callbacks for application life events.
    callbacks.create    = _create_cb;
+   callbacks.resume    = _resume_cb;
    callbacks.terminate = _terminate_cb;
    callbacks.time_tick = _time_tick_cb;
 

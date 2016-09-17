@@ -41,7 +41,7 @@ glucosio_ui_application_run()
    Eina_Bool is_run = EINA_FALSE;
    app_control_h control;
 
-   if (_application_is_exist(app_id))
+   if (glucosio_ui_application_is_exist())
      {
         app_control_create(&control);
 

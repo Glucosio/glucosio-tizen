@@ -11,6 +11,17 @@ void face_create(int width, int height);
  */
 void face_destroy();
 
+/*
+ * Show indicator if it is not shown yet.
+ * Update measurement value if it is shown.
+ */
+void face_glucose_indicator_show();
+
+/*
+ * Hide indicator if it is shown.
+ */
+void face_glucose_indicator_hide();
+
 /**
  * Update all arrows to given time.
  */

@@ -6,6 +6,7 @@
 #include "button.h"
 #include "layout.h"
 #include "path_utils.h"
+#include "application_manager.h"
 
 /**
  * For adding new style necessary to add new images of bg, arrow_hour, arrow_minute
@@ -32,12 +33,15 @@
 #define MINUTE_ARROW_FORMAT "images/arrow_minute_%d.png"
 #define SECOND_ARROW_FORMAT "images/arrow_second_%d.png"
 
+#define TEXT_COLOR_CLASS    "indicator_color"
+
 static Evas_Object *win          = NULL;
 static Evas_Object *layout_main  = NULL;
 static Evas_Object *bg           = NULL;
 static Evas_Object *arrow_hour   = NULL;
 static Evas_Object *arrow_minute = NULL;
 static Evas_Object *arrow_second = NULL;
+static Evas_Object *btn_glucosio = NULL;
 
 static int style_number          = 0;
 
@@ -54,6 +58,37 @@ _image_file_change(Evas_Object *image, const char *rel_format_path)
 }
 
 static void
+_indicator_color_change()
+{
+   Evas_Object *edje = elm_layout_edje_get(layout_main);
+   switch(style_number)
+     {
+      case 0: // White bg with pink text.
+      case 3: // Black bg with pink text.
+        edje_object_color_class_set(edje,
+                                    TEXT_COLOR_CLASS,
+                                    255, 10, 127, 255,
+                                    0, 0, 0, 0,
+                                    0, 0, 0, 0);
+        break;
+      case 1: // Pink bg with white text.
+        edje_object_color_class_set(edje,
+                                    TEXT_COLOR_CLASS,
+                                    255, 255, 255, 255,
+                                    0, 0, 0, 0,
+                                    0, 0, 0, 0);
+        break;
+      case 2: // Pink-white bg with black text.
+        edje_object_color_class_set(edje,
+                                    TEXT_COLOR_CLASS,
+                                    0, 0, 0, 255,
+                                    0, 0, 0, 0,
+                                    0, 0, 0, 0);
+        break;
+     }
+}
+
+static void
 _double_click_cb()
 {
    style_number = (style_number + 1) % STYLE_COUNT;
@@ -63,6 +98,9 @@ _double_click_cb()
    _image_file_change(arrow_hour, HOUR_ARROW_FORMAT);
    _image_file_change(arrow_minute, MINUTE_ARROW_FORMAT);
    _image_file_change(arrow_second, SECOND_ARROW_FORMAT);
+
+   // Change color of indicator text according to new style number.
+   _indicator_color_change();
 }
 
 static long long
@@ -185,6 +223,42 @@ face_destroy()
    // 2.1 This function will delete main window,
    //     and before to do this all children of window will be deleted too.
    evas_object_del(win);
+}
+
+static void
+_run_glucosio(void *data, Evas_Object *button, void *event_info)
+{
+   glucosio_ui_application_run();
+}
+
+void
+face_glucose_indicator_show()
+{
+   if (btn_glucosio == NULL)
+     {
+        btn_glucosio = button_add(layout_main, NULL, "transparent");
+        elm_object_part_content_set(layout_main, "swallow.button.glucosio", btn_glucosio);
+        evas_object_smart_callback_add(btn_glucosio, "clicked", _run_glucosio, NULL);
+     }
+
+   char value_text[PATH_MAX] = {0,};
+   int glucose_value;
+
+   glucosio_glucose_value_get(&glucose_value);
+   snprintf(value_text, PATH_MAX, "%d", glucose_value);
+   elm_object_part_text_set(layout_main, "text.indicator", value_text);
+}
+
+void
+face_glucose_indicator_hide()
+{
+   if (btn_glucosio != NULL)
+     {
+        evas_object_del(btn_glucosio);
+        btn_glucosio = NULL;
+
+        elm_object_part_text_set(layout_main, "text.indicator", "");
+     }
 }
 
 void
