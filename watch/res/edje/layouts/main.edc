@@ -1,26 +1,20 @@
-#define ID_HOUR   0
-#define ID_MINUTE 1
-#define ID_SECOND 2
+#define ID_HOUR     0
+#define ID_MINUTE   1
+#define ID_SECOND   2
 
 collections {
    group { name: "main";
-      images {
-         image: "bg_0.png" COMP;
-         image: "arrow_second_0.png" COMP;
-         image: "arrow_minute_0.png" COMP;
-         image: "arrow_hour_0.png" COMP;
-      }
       parts {
-         part { name: "image.bg";
-            type: IMAGE;
+         // Elm image will be created in "C" part and put into this container part as background.
+         part { name: "swallow.bg";
+            type: SWALLOW;
             description { state: "default" 0.0;
-               image.normal: "bg_0.png";
             }
          }
-         part { name: "image.minute";
-            type: IMAGE;
+         // Elm image will be created in "C" part and put into this container part as minute arrow.
+         part { name: "swallow.minute";
+            type: SWALLOW;
             description { state: "default" 0.0;
-               image.normal: "arrow_minute_0.png";
                // Map is necessary for part transformation
                map {
                   // Setting "on" attribute to "1" is enables map transformation.
@@ -30,24 +24,30 @@ collections {
                }
             }
          }
-         part { name: "image.hour";
-            type: IMAGE;
+         // Elm image will be created in "C" part and put into this container part as hour arrow.
+         part { name: "swallow.hour";
+            type: SWALLOW;
             description { state: "default" 0.0;
-               image.normal: "arrow_hour_0.png";
                map {
                   on: 1;
                   rotation.z: -59;
                }
             }
          }
-         part { name: "image.second";
-            type: IMAGE;
+         // Elm image will be created in "C" part and put into this container part as second arrow.
+         part { name: "swallow.second";
+            type: SWALLOW;
             description { state: "default" 0.0;
-               image.normal: "arrow_second_0.png";
                map {
                   on: 1;
                   rotation.z: 216;
                }
+            }
+         }
+         // This part is the container for button which will be created at "C" part using elm_button.
+         part { name: "swallow.button.style_change";
+            type: SWALLOW;
+            description { state: "default" 0.0;
             }
          }
       }
@@ -58,26 +58,27 @@ collections {
             // Here we will receive value with arrow angle and arrow id and then
             // we will create new "custom state" for necessary part with rotation parameter.
             public message(Msg_Type:type, id, ...) {
+               new Float:angle = getfarg(2);
                if (type == MSG_FLOAT) {
                   if (id == ID_HOUR) {
                      // Create new "custom" state with parameters as at "default" state of "image.hour" part.
-                     custom_state(PART:"image.hour", "default", 0.0);
+                     custom_state(PART:"swallow.hour", "default", 0.0);
                      // Setting rotation z parameter to received value from "C" part of application.
-                     set_state_val(PART:"image.hour", STATE_MAP_ROT_Z, getfarg(2));
+                     set_state_val(PART:"swallow.hour", STATE_MAP_ROT_Z, angle);
                      // Apply created "custom" state to "image.hour" part with hour arrow.
-                     set_state(PART:"image.hour", "custom", 0.0);
+                     set_state(PART:"swallow.hour", "custom", 0.0);
                   }
                   else if (id == ID_MINUTE) {
                      // The same as for hour arrow part
-                     custom_state(PART:"image.minute", "default", 0.0);
-                     set_state_val(PART:"image.minute", STATE_MAP_ROT_Z, getfarg(2));
-                     set_state(PART:"image.minute", "custom", 0.0);
+                     custom_state(PART:"swallow.minute", "default", 0.0);
+                     set_state_val(PART:"swallow.minute", STATE_MAP_ROT_Z, angle);
+                     set_state(PART:"swallow.minute", "custom", 0.0);
                   }
                   else if (id == ID_SECOND) {
                      // The same as for hour arrow part
-                     custom_state(PART:"image.second", "default", 0.0);
-                     set_state_val(PART:"image.second", STATE_MAP_ROT_Z, getfarg(2));
-                     set_state(PART:"image.second", "custom", 0.0);
+                     custom_state(PART:"swallow.second", "default", 0.0);
+                     set_state_val(PART:"swallow.second", STATE_MAP_ROT_Z, angle);
+                     set_state(PART:"swallow.second", "custom", 0.0);
                   }
                }
             }
