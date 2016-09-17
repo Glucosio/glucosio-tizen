@@ -1,9 +1,16 @@
-#define ID_HOUR     0
-#define ID_MINUTE   1
-#define ID_SECOND   2
+#define ID_HOUR   0
+#define ID_MINUTE 1
+#define ID_SECOND 2
+#define SIZE_TEXT 35
 
 collections {
    group { name: "main";
+      color_classes {
+         color_class {
+            name: "indicator_color";
+            color: 0 0 0 0;
+         }
+      }
       parts {
          // Elm image will be created in "C" part and put into this container part as background.
          part { name: "swallow.bg";
@@ -48,6 +55,22 @@ collections {
          part { name: "swallow.button.style_change";
             type: SWALLOW;
             description { state: "default" 0.0;
+            }
+         }
+         // This part is the container for button to start glucosio ui app.
+         part { name: "text.indicator";
+            type: TEXT;
+            description { state: "default" 0.0;
+               text.size: SIZE_TEXT;
+               color_class: "indicator_color";
+               rel1.relative: 0.0 0.7;
+            }
+         }
+         // This part is the container for button to start glucosio ui app.
+         part { name: "swallow.button.glucosio";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1.relative: 0.0 0.7;
             }
          }
       }

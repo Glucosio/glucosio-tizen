@@ -5,4 +5,7 @@
         <label>Glucosio Watch</label>
         <icon>preview.png</icon>
     </watch-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+    </privileges>
 </manifest>
