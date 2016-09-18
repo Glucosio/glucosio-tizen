@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 	<application name="org.example.glucosioedc">
-		<serviceProfile id="glucosio" name="GlucosioEDC"
+		<serviceProfile id="example/glucosio" name="GlucosioEDC"
 			autoLaunchAppId="org.example.glucosioedc" role="provider"
 			version="1.0">
 			<supportedTransports>

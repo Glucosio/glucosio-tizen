@@ -3,7 +3,7 @@
 #include <dlog.h>
 #include "glucosioedc.h"
 
-#define HELLO_ACCESSORY_PROFILE_ID "/sample/hello"
+#define HELLO_ACCESSORY_PROFILE_ID "/example/glucosio"
 #define HELLO_ACCESSORY_CHANNELID 104
 
 struct priv {

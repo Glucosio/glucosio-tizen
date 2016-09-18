@@ -4,7 +4,7 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="bin%2Fglucosioedc">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>qehcTiOM2/K67Yum8OhHAzMswnsC74kRGJWShJpHeHg=</DigestValue>
+<DigestValue>Ff1QWUaq0bC5A410fNaHWcIauaiOEyqTwcIBWdtx0pY=</DigestValue>
 </Reference>
 <Reference URI="res%2Fedje%2Fglucosioedc.edj">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -24,7 +24,7 @@
 </Reference>
 <Reference URI="res%2Fxml%2Faccessoryservices.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>eTbWB5JUXops/OlgAiASvNZLtul55MhECM7CMu1Uytc=</DigestValue>
+<DigestValue>cIDu51flDZ3RjdVGsUaAlvyLDD2oET9WckrgTd5PPvo=</DigestValue>
 </Reference>
 <Reference URI="shared%2Fres%2Fglucosioedc.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -43,11 +43,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-i48HvbRD6v35iNyGxSUtVrC5TUozp2yBhSBFEwmQBveqfu4YSHsXldaaSFlo1FzitpUs/m3jvwp8
-voZg9GjDHAZpFpVSRgDr3pY5+a8Ca1t/ZmxP20E37JVaKFKvXTblx29oxCKn8bMuq9pO29Q99JrV
-qlLEHsimMSdMWi/5ByYvuYWSAcZMsy9Q7ZE86NHk505e0exvEHvQCFIL6zfwcBzBvDMx4gU1RBh4
-bdr7Gm5+tF6HtpR7ltbgMwNZTn9WzpLq7l9t2ULt6/mRtbdkn4Eg4JlfKp6cP/530QAemQTByemM
-jP/fQvEQ7V7ihT99KJCsblyidhCKpIWuHpcn8A==
+nqmO7wk0BDqcHA1deSE4R71OEsZGXYTQLMnYI+zJ6QVWLa+nf6g7gV5DMYSN3hfzdTGG3DiXK1lM
+qhMH5vlEJA/ETmFzxB2wv1l1IeiJEIVy/w4laZ2wdCtRsLto3aBGg4kg6FAFkur6+LRvT8vMdj4M
+CpM7uqxds+zE1DPG9QFZjNdFBUzipsx7cvES882UBU5OuXB23/bbZpGXmbzE9KpLfECw9xV8y0D7
+CcMA4GFRb8vlHwqnsnZoxeeW2ds0616CpmbnhtWU6rIbfzfHSGlkO26bAfPwh4fefP6usVveAvRH
+1liXBC38DT44JyvixpCQRxcPRaXpp53Z6/J/Vw==
 </SignatureValue>
 <KeyInfo>
 <X509Data>
