@@ -4,7 +4,7 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="bin%2Fglucosioedc">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>zeWG2RsH94PuHGAOb2+vzXNviqbADLYtb2ToJhWdz3k=</DigestValue>
+<DigestValue>jUkNHlWS8psJZU9o3mP8FxE2EBcRC7nUsMe7R4Ekwao=</DigestValue>
 </Reference>
 <Reference URI="res%2Fedje%2Fglucosioedc.edj">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -22,13 +22,17 @@
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>Qvon7MEU1pqpvK0LTTWuEJHFyrhawm5IVxmxXL4sVAo=</DigestValue>
 </Reference>
+<Reference URI="res%2Fxml%2Faccessoryservices.xml">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>ULj3tMEH/HDGdkG9twJNh8VrNN1y7OGFwbH8y8h3Y8E=</DigestValue>
+</Reference>
 <Reference URI="shared%2Fres%2Fglucosioedc.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>1d0oEZHqPn+QzNzGIHwj9ODby6x9ggFs9uOsav6jPNs=</DigestValue>
 </Reference>
 <Reference URI="tizen-manifest.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>bUZZP78n9W5wWQ5kdMACMWK1ytNlt/51XvNbdWQDfEM=</DigestValue>
+<DigestValue>K+AisXKSiSHfeG76CZfHcOiG3wZbpwa1LCHUfUCY+Z8=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -39,11 +43,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-V7K+B7WJY8FlGr38dfriTDR+FtvGl3lLm7EtAf1INAIjKwjaVhY7jOJQCcXvg5i9ZW0xRPowk0ep
-OgGMxPVfQ/+15RTgiSRl764yV3pjKtcnx8UOWpaq1tJYCTJ+gVp7iPBhe2iYbKgamsFmffIPM+ZP
-vCYfHltSeyP2e4cSKpMLLquflsEiyqSA5hg7QTOTf1lWthOEVCUVhupdg/YEbWNZsNErFuliOYhw
-zgd0x7hR8YeAvDRRwBlFAyE3GTnlePCfO8rbfr34ISi8GXosfrHGpGPJgcW5h557lbYPrRkhXFHY
-Kr4/Mk/pKyWCtpG+FOMMHUEldq5TVeMkqhdXRg==
+asFFTaFeX6Ptol8KGUaKLQ2YRa3T4Q/8eZ4UMTaz6aM/GfoYnUqo6G8WrYQkFaaAhp8nCYHskuVe
+3yiiozy6lKHJzeBHOsjRuSdX6DkvCONnT4MKqVnxhM2JVv1TuyHs88pxuo5eV2CIBw5MCTQlpAR6
+c4U9evzK7k3qg0wEHKjqjfuHSigIWmm9z9Vq0jJ3S5Lk/ERlmvOqNDK2i7FMSBD2yu8++M8o+li7
+kcoUSaXknEIytnjQ05qs79PodDKKkj2RmBSXXXe0oTR49cPVSxYXYP6RXgpEXk9ttDgZyKb9WIhe
+m2NKCXHGbA+9GJeWwoc5k5/Zx+ZwoOd8zpSjUQ==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

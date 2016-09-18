@@ -173,6 +173,8 @@ static void _click_cb(void *data, Evas_Object *button, void *event_info){
 static void _enter_click_cb(void *data, Evas_Object *entry, void *event_info){
 	char *glucose_reading = elm_entry_entry_get(entry);
 	dlog_print(DLOG_DEBUG, "TAG", "Value: %s", glucose_reading);
+	send_data(glucose_reading);
+
 }
 
 static void _entry_create(appdata_s *data)
@@ -191,8 +193,6 @@ static void _entry_create(appdata_s *data)
 
 	elm_entry_markup_filter_append(data->entry, elm_entry_filter_limit_size, &limit_filter);
 	evas_object_smart_callback_add(data->entry, "activated", _enter_click_cb, data);
-
-
 
 
 }
@@ -255,7 +255,7 @@ app_create(void *data)
 	   If this function returns true, the main loop of application starts
 	   If this function returns false, the application is terminated */
 	appdata_s *ad = data;
-
+	initialize_sap();
 	create_base_gui(ad);
 
 	return true;

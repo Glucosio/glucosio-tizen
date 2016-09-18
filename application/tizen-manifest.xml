@@ -4,5 +4,10 @@
     <ui-application appid="org.example.glucosioedc" exec="glucosioedc" multiple="false" nodisplay="false" taskmanage="true" type="capp">
         <label>glucosioedc</label>
         <icon>glucosioedc.png</icon>
+        <metadata key="accessory-services-location" value="/res/xml/accessoryservices.xml"/>
+        
     </ui-application>
+       <privileges>
+        <privilege>http://developer.samsung.com/tizen/privilege/accessoryprotocol</privilege>
+    </privileges>
 </manifest>

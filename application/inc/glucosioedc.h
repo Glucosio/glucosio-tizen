@@ -6,11 +6,20 @@
 #include <system_settings.h>
 #include <efl_extension.h>
 #include <dlog.h>
+#include <glib.h>
+
 
 #ifdef  LOG_TAG
 #undef  LOG_TAG
 #endif
 #define LOG_TAG "glucosioedc"
+
+void     initialize_sap();
+gboolean find_peers();
+gboolean request_service_connection(void);
+gboolean terminate_service_connection(void);
+gboolean send_data(char *message);
+
 
 #if !defined(PACKAGE)
 #define PACKAGE "org.example.glucosioedc"
