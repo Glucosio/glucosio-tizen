@@ -24,8 +24,8 @@ collections {
                rel2.relative: 1.0 1.0;
             }
          }
-         part { name: "";
-            type: IMAGE;
+         part { name: "entry_area";
+            type: SWALLOW;
             scale: 1;
             mouse_events: 1;
             description { state: "default" 0.0;
@@ -33,10 +33,22 @@ collections {
                fixed: 0 0;
                min: 0 0;
                visible: 1;
+               max: 120 60;
+            }
+         }
+         
+         part { name: "";
+            type: IMAGE;
+            scale: 1;
+            mouse_events: 1;
+            description { state: "default" 0.0;
+               align: 0.1 0.5;
+               fixed: 0 0;
+               min: 0 0;
+               visible: 1;
                image.normal: "glucosio-logo.png";
-               //aspect: 1 1;
-               rel1.relative: 0.25 0.25;
-               rel2.relative: 0.75 0.75;
+               aspect: 1 1;
+               max: 70 70;
             }
          }
          part { name: "bottom_button_area";

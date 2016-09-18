@@ -6,6 +6,7 @@ typedef struct appdata{
 	Evas_Object* win;
 	Evas_Object* layout;
 	Evas_Object* conform;
+	Evas_Object* entry;
 } appdata_s;
 
 
@@ -168,6 +169,35 @@ static void _click_cb(void *data, Evas_Object *button, void *event_info){
 
 }
 
+
+static void _enter_click_cb(void *data, Evas_Object *entry, void *event_info){
+	char *glucose_reading = elm_entry_entry_get(entry);
+	dlog_print(DLOG_DEBUG, "TAG", "Value: %s", glucose_reading);
+}
+
+static void _entry_create(appdata_s *data)
+{
+	data->entry = elm_entry_add(data->layout);
+	elm_object_part_content_set(data->layout, "entry_area", data->entry);
+	evas_object_show(data->entry);
+
+	Elm_Entry_Filter_Limit_Size limit_filter;
+
+	limit_filter.max_char_count = 3;
+	elm_entry_input_panel_layout_set(data->entry, ELM_INPUT_PANEL_LAYOUT_NUMBERONLY);
+
+	elm_entry_single_line_set(data->entry, EINA_TRUE);
+
+
+	elm_entry_markup_filter_append(data->entry, elm_entry_filter_limit_size, &limit_filter);
+	evas_object_smart_callback_add(data->entry, "activated", _enter_click_cb, data);
+
+
+
+
+}
+
+
 static void
 create_base_gui(appdata_s *ad)
 {
@@ -192,12 +222,14 @@ create_base_gui(appdata_s *ad)
 	evas_object_size_hint_weight_set(ad->conform, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	elm_win_resize_object_add(ad->win, ad->conform);
 	evas_object_show(ad->conform);
-
 	/* Base Layout */
 	app_get_resource(EDJ_FILE, edj_path, (int)PATH_MAX);
 	ad->layout = elm_layout_add(ad->win);
 	elm_layout_file_set(ad->layout, edj_path, GRP_MAIN);
 	elm_object_part_text_set(ad->layout, "txt_title", "Glucosio");
+
+	_entry_create(ad);
+
 	evas_object_size_hint_weight_set(ad->layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	eext_object_event_callback_add(ad->layout, EEXT_CALLBACK_BACK, layout_back_cb, ad);
 	elm_object_content_set(ad->conform, ad->layout);
@@ -214,7 +246,6 @@ create_base_gui(appdata_s *ad)
 	evas_object_show(ad->win);
 
 }
-
 
 static bool
 app_create(void *data)
