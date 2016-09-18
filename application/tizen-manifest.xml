@@ -5,7 +5,6 @@
         <label>glucosioedc</label>
         <icon>glucosioedc.png</icon>
         <metadata key="accessory-services-location" value="/res/xml/accessoryservices.xml"/>
-        
     </ui-application>
        <privileges>
         <privilege>http://developer.samsung.com/tizen/privilege/accessoryprotocol</privilege>

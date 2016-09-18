@@ -1,6 +1,7 @@
-#include "helloaccessory.h"
 #include <glib.h>
 #include <sap.h>
+#include <dlog.h>
+#include "glucosioedc.h"
 
 #define HELLO_ACCESSORY_PROFILE_ID "/sample/hello"
 #define HELLO_ACCESSORY_CHANNELID 104

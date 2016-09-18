@@ -4,7 +4,7 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="bin%2Fglucosioedc">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>jUkNHlWS8psJZU9o3mP8FxE2EBcRC7nUsMe7R4Ekwao=</DigestValue>
+<DigestValue>qehcTiOM2/K67Yum8OhHAzMswnsC74kRGJWShJpHeHg=</DigestValue>
 </Reference>
 <Reference URI="res%2Fedje%2Fglucosioedc.edj">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -24,7 +24,7 @@
 </Reference>
 <Reference URI="res%2Fxml%2Faccessoryservices.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>ULj3tMEH/HDGdkG9twJNh8VrNN1y7OGFwbH8y8h3Y8E=</DigestValue>
+<DigestValue>eTbWB5JUXops/OlgAiASvNZLtul55MhECM7CMu1Uytc=</DigestValue>
 </Reference>
 <Reference URI="shared%2Fres%2Fglucosioedc.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -32,7 +32,7 @@
 </Reference>
 <Reference URI="tizen-manifest.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>K+AisXKSiSHfeG76CZfHcOiG3wZbpwa1LCHUfUCY+Z8=</DigestValue>
+<DigestValue>FZpvUrP0L+ojDgjV9PjCyoN+1Prjgl4Dh6PD3MGDDZY=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -43,11 +43,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-asFFTaFeX6Ptol8KGUaKLQ2YRa3T4Q/8eZ4UMTaz6aM/GfoYnUqo6G8WrYQkFaaAhp8nCYHskuVe
-3yiiozy6lKHJzeBHOsjRuSdX6DkvCONnT4MKqVnxhM2JVv1TuyHs88pxuo5eV2CIBw5MCTQlpAR6
-c4U9evzK7k3qg0wEHKjqjfuHSigIWmm9z9Vq0jJ3S5Lk/ERlmvOqNDK2i7FMSBD2yu8++M8o+li7
-kcoUSaXknEIytnjQ05qs79PodDKKkj2RmBSXXXe0oTR49cPVSxYXYP6RXgpEXk9ttDgZyKb9WIhe
-m2NKCXHGbA+9GJeWwoc5k5/Zx+ZwoOd8zpSjUQ==
+i48HvbRD6v35iNyGxSUtVrC5TUozp2yBhSBFEwmQBveqfu4YSHsXldaaSFlo1FzitpUs/m3jvwp8
+voZg9GjDHAZpFpVSRgDr3pY5+a8Ca1t/ZmxP20E37JVaKFKvXTblx29oxCKn8bMuq9pO29Q99JrV
+qlLEHsimMSdMWi/5ByYvuYWSAcZMsy9Q7ZE86NHk505e0exvEHvQCFIL6zfwcBzBvDMx4gU1RBh4
+bdr7Gm5+tF6HtpR7ltbgMwNZTn9WzpLq7l9t2ULt6/mRtbdkn4Eg4JlfKp6cP/530QAemQTByemM
+jP/fQvEQ7V7ihT99KJCsblyidhCKpIWuHpcn8A==
 </SignatureValue>
 <KeyInfo>
 <X509Data>
