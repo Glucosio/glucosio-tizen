@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-	<application name="org.example.glucosioedc">
-		<serviceProfile id="example/glucosio" name="GlucosioEDC"
-			autoLaunchAppId="org.example.glucosioedc" role="provider"
-			version="1.0">
-			<supportedTransports>
-				<transport type="TRANSPORT_BT" />
-				<transport type="TRANSPORT_WIFI" />
-			</supportedTransports>
-			<serviceChannel id="104" dataRate="low" priority="low"
-				reliability="enable">
-			</serviceChannel>
-		</serviceProfile>
-	</application>
+   <application name="GearGlucosioAppConsumer">
+      <serviceProfile
+           id="glucosio_companion_gear"
+           name="HelloAccessoryConsumer"
+           role="consumer"
+           version="1.0">
+         <supportedTransports>
+            <transport type="TRANSPORT_BT" />
+            <transport type="TRANSPORT_WIFI" />
+         </supportedTransports>
+         <serviceChannel
+              id="104"
+              dataRate="low"
+              priority="low"
+              reliability="enable">
+         </serviceChannel>
+      </serviceProfile>
+   </application>
 </resources>

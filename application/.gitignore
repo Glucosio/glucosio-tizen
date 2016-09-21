@@ -1,1 +1,6 @@
 /Debug
+/SA_Report
+.sdk_delta.info
+/.sign
+/Release
+.rds_delta*
