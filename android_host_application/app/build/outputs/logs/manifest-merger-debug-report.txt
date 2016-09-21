@@ -1,0 +1,125 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:2:1-55:12
+	package
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:3:5-80
+		INJECTED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml
+		INJECTED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:5:5-32
+		INJECTED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml
+		INJECTED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml
+		INJECTED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:23.1.1] /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:9:9-38
+		INJECTED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml
+		INJECTED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:8:9-35
+		INJECTED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml
+		INJECTED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.BLUETOOTH
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:11:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:12:5-74
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:12:22-71
+uses-permission#com.samsung.accessory.permission.ACCESSORY_FRAMEWORK
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:13:5-92
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:13:22-89
+uses-permission#com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:14:5-117
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:14:22-114
+uses-permission#com.samsung.WATCH_APP_TYPE.Companion
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:15:5-76
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:15:22-73
+uses-permission#com.samsung.wmanager.ENABLE_NOTIFICATION
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:16:5-80
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:16:22-77
+android:uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:18:5-89
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:18:30-86
+android:uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:19:5-83
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:19:30-80
+android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:20:5-88
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:20:30-85
+application
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:22:5-53:19
+MERGED from [com.android.support:appcompat-v7:23.1.1] /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:25:9-41
+	android:allowBackup
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:23:9-35
+	android:icon
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:24:9-43
+service#com.samsung.android.sdk.accessory.example.helloaccessory.provider.ProviderService
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:26:9-52
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:26:18-49
+receiver#com.samsung.android.sdk.accessory.RegisterUponInstallReceiver
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:28:9-32:20
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:28:19-95
+intent-filter#com.samsung.accessory.action.REGISTER_AGENT
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:29:13-31:29
+action#com.samsung.accessory.action.REGISTER_AGENT
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:30:17-86
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:30:25-83
+receiver#com.samsung.android.sdk.accessory.ServiceConnectionIndicationBroadcastReceiver
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:33:9-37:20
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:33:19-112
+intent-filter#com.samsung.accessory.action.SERVICE_CONNECTION_REQUESTED
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:34:13-36:29
+action#com.samsung.accessory.action.SERVICE_CONNECTION_REQUESTED
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:35:17-100
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:35:25-97
+meta-data#AccessoryServicesLocation
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:39:9-41:62
+	android:value
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:41:13-59
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:40:13-53
+meta-data#GearAppType
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:42:9-44:35
+	android:value
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:44:13-32
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:43:13-39
+activity#com.samsung.android.sdk.accessory.example.helloaccessory.provider.MainActivity
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:46:9-52:20
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:46:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:47:13-51:29
+action#android.intent.action.MAIN
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:48:17-69
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:48:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:50:17-77
+	android:name
+		ADDED from /home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/src/main/AndroidManifest.xml:50:27-74

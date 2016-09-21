@@ -1,0 +1,24 @@
+<resources>
+
+    <application name="HelloAccessoryProvider" >
+        <serviceProfile
+            id="glucosio_companion_gear"
+            name="helloaccessory"
+            role="provider"
+            serviceImpl="com.samsung.android.sdk.accessory.example.helloaccessory.provider.ProviderService"
+            version="1.0"
+            serviceLimit="ANY"
+            serviceTimeout="10">
+            <supportedTransports>
+                <transport type="TRANSPORT_BT" />
+                <transport type="TRANSPORT_WIFI" />
+            </supportedTransports>
+            <serviceChannel
+                id="104"
+                dataRate="low"
+                priority="low"
+                reliability= "enable"/>
+        </serviceProfile>
+    </application>
+
+</resources>

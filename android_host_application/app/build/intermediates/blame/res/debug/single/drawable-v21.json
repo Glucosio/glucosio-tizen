@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/home/vladyslav/documents/personal_work/freelance/projects/glucosio/AccessorySDK_Sample_v2.4.0/Samples(Native)/HelloAccessory/Provider(Android)_Consumer(Tizen)/Provider/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    }
+]
