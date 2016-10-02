@@ -54,6 +54,12 @@ static void _click_cb(void *data, Evas_Object *button, void *event_info){
    ecore_timer_add(7, _timer_cb, NULL);
 }
 
+
+static void _add_cb(void *data, Evas_Object *button, void *event_info){
+	elm_object_focus_set(data, EINA_TRUE);
+}
+
+
 static void
 _peer_found_cb(void *data)
 {
@@ -83,7 +89,7 @@ static void
 _entry_create(appdata_s *data)
 {
    data->entry = elm_entry_add(data->layout);
-
+   elm_object_translatable_part_text_set(data->entry, "elm.guide", "Enter...");
    Elm_Entry_Filter_Limit_Size limit_filter;
    limit_filter.max_char_count = 3;
    elm_entry_markup_filter_append(data->entry, elm_entry_filter_limit_size, &limit_filter);
@@ -126,7 +132,8 @@ create_base_gui(appdata_s *ad)
    elm_object_content_set(ad->conform, ad->layout);
 
    Evas_Object *button = elm_button_add(ad->layout);
-   evas_object_smart_callback_add(button, "clicked", _click_cb, ad->layout);
+   evas_object_smart_callback_add(button, "clicked", _add_cb, ad->entry);
+   elm_object_text_set(button, "Add");
 
 
    elm_object_part_content_set(ad->layout, "bottom_button_area", button);
